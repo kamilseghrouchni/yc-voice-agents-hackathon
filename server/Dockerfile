@@ -15,6 +15,12 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv sync --locked --no-install-project --no-dev
 
-# Copy the application code
-COPY ./bot.py bot.py
-COPY ./mock_backend.py mock_backend.py
+# Copy the application code.
+# Pipecat Cloud expects an entrypoint at /app/bot.py — we ship bot-biobank.py
+# as bot.py so the platform finds it.
+COPY ./bot-biobank.py bot.py
+COPY ./biobank_backend.py biobank_backend.py
+COPY ./nvidia_stt.py nvidia_stt.py
+COPY ./nemotron_llm.py nemotron_llm.py
+COPY ./biobanks ./biobanks
+COPY ./prompts ./prompts

@@ -1,0 +1,13 @@
+{
+  "base_url": "https://www.referencemedicine.com",
+  "pages": {
+    "home": "/",
+    "process": "/process",
+    "case_studies": "/case-studies",
+    "inventory": "/inventory-all-specimens",
+    "about": "/about",
+    "partner": "/partner-with-us",
+    "contact": "/contact"
+  },
+  "_note": "Hand-curated for v0. Future: a sitemap-discovery harvester should populate this — see CLAUDE.md 'generalize, don't hardcode' rule. Unknown pages 404 gracefully on Chromium; that's fine for a demo."
+}

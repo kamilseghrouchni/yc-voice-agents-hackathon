@@ -1,5 +1,5 @@
-agent_name = "flower-bot"
-secret_set = "flower-bot-secrets"
+agent_name = "biobank-concierge"
+secret_set = "biobank-concierge-secrets"
 agent_profile = "agent-1x"
 
 [krisp_viva]
